@@ -63,7 +63,7 @@ function App() {
       {/* Logged in & Onboarded - show main app */}
       {hasLoggedIn&&hasOnboarded&&
         (
-          dimensions.width>600? //width of phones:300-500
+          dimensions.width>6000? //width of phones:300-500
             (
             <DesktopLayout>
               <MainPageContent/>
