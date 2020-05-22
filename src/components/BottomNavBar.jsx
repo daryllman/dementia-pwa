@@ -7,7 +7,8 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
 import ResourcesIcon from '@material-ui/icons/ImportContacts';
-import QnAIcon from '@material-ui/icons/Message';
+// import QnAIcon from '@material-ui/icons/Message';
+import QnAIcon from '@material-ui/icons/QuestionAnswer';
 import ProfileIcon from '@material-ui/icons/AccountCircle';
 
 import { useHistory } from "react-router-dom";
