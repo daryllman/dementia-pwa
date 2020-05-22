@@ -21,7 +21,7 @@ import {userData, otherData} from './mockData';
 
 
 function App() {
-  const [currPage, setCurrPage] = useState('/');
+  //const [currPage, setCurrPage] = useState('/'); ---to be done --to set state to sync desktop n mobile view
 
   const [hasLoggedIn, setHasLoggedIn] = useState(userData!=null);
   const [hasOnboarded, setHasOnboarded] = useState(userData!=null && userData.hasOnboarded);
