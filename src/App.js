@@ -100,16 +100,18 @@ function MainPageContent(){
 function MobileLayout({children}){
   return(
     <>
-    {/* <div style={{background:'grey'}}>MobileLayout</div> */}
+    <div style={{'margin-bottom':'65px'}}>
+      {/* <div style={{background:'grey'}}>MobileLayout</div> */}
       {children}
-    {/* <div style={{background:'red', position:'fixed', bottom:'0', width:'100vw', height:'68px'}}>MobileLayout-BottomNavBar</div> */}
+      {/* <div style={{background:'red', position:'fixed', bottom:'0', width:'100vw', height:'68px'}}>MobileLayout-BottomNavBar</div> */}
+    </div>
     <BottomNavBar/>
 
     </>
   )
 }
 
-function DesktopLayout({children}){
+function DesktopLayout({children}){ //IGNORE THIS ---to fixxxx
   return(
     <>
     <div style={{background:'grey'}}>DesktopLayout - TopNavBar</div>
