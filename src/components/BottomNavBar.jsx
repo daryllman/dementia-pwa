@@ -16,8 +16,12 @@ const useStyles = makeStyles({
       width: '100vw',
       position: 'fixed',
       bottom: '0',
-      background:'F7F7F7'
+      background:'F7F7F7',
     },
+    selected:{
+        color:'black',
+        background:'black'
+    }
   });
 
 function BottomNavBar(){
@@ -29,8 +33,8 @@ function BottomNavBar(){
     };
 
     return (
-        <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-          <BottomNavigationAction label="home" value="home" icon={<HomeIcon />} />
+        <BottomNavigation value={value} onChange={handleChange} showLabels={true} className={classes.root}>
+          <BottomNavigationAction label="home" value="home" icon={<HomeIcon />}/>
           <BottomNavigationAction label="resources" value="resources" icon={<ResourcesIcon />} />
           <BottomNavigationAction label="Q&A" value="qna" icon={<QnAIcon />} />
           <BottomNavigationAction label="profile" value="profile" icon={<ProfileIcon />} />
