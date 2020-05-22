@@ -114,7 +114,7 @@ function MobileLayout({children}){
 function DesktopLayout({children}){ //IGNORE THIS ---to fixxxx
   return(
     <>
-    <div style={{background:'grey'}}>DesktopLayout - TopNavBar</div>
+    <div style={{background:'grey'}}>DesktopLayout - TopNavBar(ignore desktop view first) (please make your window smaller)</div>
       {children}
     </>
   )
