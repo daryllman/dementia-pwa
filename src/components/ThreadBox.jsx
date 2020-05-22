@@ -6,7 +6,7 @@ import {CommentNLikeWrapper} from './icons/Comment-N-Like-Button';
 
 const LapsedText = styled.div`
   color: var(--primary-green-color);
-  font-size: 11px;
+  font-size: 12px;
 `
 
 const TopContainer = styled.div`

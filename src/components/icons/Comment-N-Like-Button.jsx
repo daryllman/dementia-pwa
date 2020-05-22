@@ -26,10 +26,10 @@ function CommentButton(){
     )
 }
 
-function CommentWrapper(){
+function CommentWrapper({commentsNum}){
     return(
         <ButtonWrapper>
-            <CommentButton/><Numbers>22</Numbers>
+            <CommentButton/><Numbers>{commentsNum}</Numbers>
         </ButtonWrapper>
     )
 }
@@ -40,18 +40,18 @@ function LikeButton(){
   )
 }
 
-function LikeWrapper(){
+function LikeWrapper({likesNum}){
   return(
       <ButtonWrapper>
-          <LikeButton/><Numbers>22</Numbers>
+          <LikeButton/><Numbers>{likesNum}</Numbers>
       </ButtonWrapper>
   )
 }
 
-function CommentNLikeWrapper(){
+function CommentNLikeWrapper({commentsNum, likesNum}){
   return(
       <BothWrapper>
-          <CommentWrapper/><LikeWrapper/>
+          <CommentWrapper commentsNum={commentsNum}/><LikeWrapper likesNum={likesNum}/>
       </BothWrapper>
   )
 }
