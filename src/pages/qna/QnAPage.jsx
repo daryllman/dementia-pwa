@@ -1,10 +1,10 @@
 import React from 'react';
 import DarkGreenOverlay from '../../components/DarkGreenOverlay';
-import BackButton from '../../components/BackButton';
+import BackButton from '../../components/icons/BackButton';
 import PageTitle from '../../components/PageTitle'
 import TextBox from '../../components/TextBox'
 import Pill from '../../components/Pill'
-
+import {CommentButton, CommentWrapper, LikeButton, LikeWrapper,CommentNLikeWrapper} from '../../components/icons/Comment-N-Like-Button'
 
 function QnAPage(){
     return(
@@ -15,6 +15,7 @@ function QnAPage(){
             <TextBox>
                 <Pill>Wandering</Pill>
                 sadasds sdasd as das dasd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd as dasd as dasd as ds dasdsdsds dsdsdsdsd sdsdsd asd asd asd sd sd s dasd asd asd asd asd 
+                 <CommentNLikeWrapper/>
             </TextBox>
             <TextBox>
                 sadasds sdasd as das dasd asd asd asd asd asd asd asd asd asd asd asd asd
