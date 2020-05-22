@@ -7,18 +7,16 @@
     --primary-text-color: #333333;
     --primary-white-text-color: #FFFFFF;
     --bottom-nav-height: 56px;
+    --tealgreen-pill-color: #3C8484;
 }
 
 body,
 html {
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-green-color);
+    font-size: 16px;
 }
 
 .App {
     text-align: center;
-}
-
-p {
-    font-size: 22px;
 }
