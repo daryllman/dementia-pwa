@@ -7,6 +7,8 @@ import './App.css';
 import LoginPage from './pages/onboarding/LoginPage'
 import HomePage from './pages/home/HomePage';
 import ResourcesPage from './pages/resources/ResourcesPage';
+import QnAPage from './pages/qna/QnAPage';
+import ProfilePage from './pages/profile/ProfilePage';
 import BottomNavBar from './components/BottomNavBar';
 import TopNavBar from './components/TopNavBar';
 
@@ -19,6 +21,7 @@ import {userData, otherData} from './mockData';
 
 
 function App() {
+  const [currPage, setCurrPage] = useState('/');
 
   const [hasLoggedIn, setHasLoggedIn] = useState(userData!=null);
   const [hasOnboarded, setHasOnboarded] = useState(userData!=null && userData.hasOnboarded);
@@ -83,12 +86,12 @@ function App() {
 function MainPageContent(){
   return (
     <div className="MainPageContent" style={{ width:'100%', height:'100%'}}>
-      <BrowserRouter>
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/resources' component={ResourcesPage}/>
+          <Route path='/qna' component={QnAPage}/>
+          <Route path='/profile' component={ProfilePage}/>
         </Switch>
-      </BrowserRouter>
     </div>
   )
 }
@@ -97,7 +100,7 @@ function MainPageContent(){
 function MobileLayout({children}){
   return(
     <>
-    <div style={{background:'grey'}}>MobileLayout</div>
+    {/* <div style={{background:'grey'}}>MobileLayout</div> */}
       {children}
     {/* <div style={{background:'red', position:'fixed', bottom:'0', width:'100vw', height:'68px'}}>MobileLayout-BottomNavBar</div> */}
     <BottomNavBar/>

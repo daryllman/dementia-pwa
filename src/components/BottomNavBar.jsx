@@ -10,6 +10,8 @@ import ResourcesIcon from '@material-ui/icons/ImportContacts';
 import QnAIcon from '@material-ui/icons/Message';
 import ProfileIcon from '@material-ui/icons/AccountCircle';
 
+import { useHistory } from "react-router-dom";
+
 
 const useStyles = makeStyles({
     root: {
@@ -25,6 +27,7 @@ const useStyles = makeStyles({
   });
 
 function BottomNavBar(){
+    const history = useHistory();
 
     const classes = useStyles();
     const [value, setValue] = React.useState('home');
@@ -33,11 +36,11 @@ function BottomNavBar(){
     };
 
     return (
-        <BottomNavigation value={value} onChange={handleChange} showLabels={true} className={classes.root}>
-          <BottomNavigationAction label="home" value="home" icon={<HomeIcon />}/>
-          <BottomNavigationAction label="resources" value="resources" icon={<ResourcesIcon />} />
-          <BottomNavigationAction label="Q&A" value="qna" icon={<QnAIcon />} />
-          <BottomNavigationAction label="profile" value="profile" icon={<ProfileIcon />} />
+        <BottomNavigation value={value} onChange={handleChange} showLabels={true} className={classes.root} >
+          <BottomNavigationAction label="home" value="home" icon={<HomeIcon />} onClick={()=>history.push("/")}/>
+          <BottomNavigationAction label="resources" value="resources" icon={<ResourcesIcon /> } onClick={()=>history.push("/resources")}/>                
+          <BottomNavigationAction label="Q&A" value="qna" icon={<QnAIcon />} onClick={()=>history.push("/qna")}/>
+          <BottomNavigationAction label="profile" value="profile" icon={<ProfileIcon />} onClick={()=>history.push("/profile")}/>
         </BottomNavigation>
       );
 }
