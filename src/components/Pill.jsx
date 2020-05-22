@@ -6,7 +6,7 @@ const PillContainer = styled.div`
   display:block;
   border-radius: 15px;
   height: auto;
-  padding: 5px;
+  padding: 3px 7px 3px 7px;
   width: fit-content;
   color: var(--primary-white-text-color);
   font-size: 11px;'
