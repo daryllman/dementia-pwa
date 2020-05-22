@@ -5,6 +5,8 @@
     --light-grey-color: #F7F7F7;
     --grey-color: #BDBDBD;
     --primary-text-color: #333333;
+    --primary-white-text-color: #FFFFFF;
+    --bottom-nav-height: 56px;
 }
 
 body,
