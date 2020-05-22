@@ -6,8 +6,14 @@ import React from 'react'
 
 export const userData = {
     hasOnboarded: true,
+    userName: 'Jack',
+    patientName: 'Mr Lim Boon Kok',
+    patientTraits: ['Wandering', 'Resistive', 'Physical Aggression']
 };
 
-export const otherData = {
+export const onboardingData = {}
 
-}
+export const patientTraitsData = {}
+
+
+export const qnaData = {}
