@@ -21,7 +21,7 @@ function QnAPage(){
                 <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} />
             )
             )}
-            
+
         </DarkGreenOverlay>
         </>
     )
@@ -31,3 +31,28 @@ export default QnAPage;
 
 
 
+//Just archive on how to use BackButton and PageTitle
+/* 
+
+function QnAPage(){
+    //const latestQuestions = qnaData.latestQuestions;
+    return(
+        <>
+        <BackButton/>
+        <PageTitle>Q&A Page</PageTitle>
+        <DarkGreenOverlay>
+
+            {qnaData.latestQuestions.map(( item )=>( // attributes: trait, hoursAgo, question, commentsNum, likesNum
+                <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} />
+            )
+            )}
+            
+        </DarkGreenOverlay>
+        </>
+    )
+}
+
+export default QnAPage;
+
+
+*/
