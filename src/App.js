@@ -1,26 +1,119 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import {BrowserRouter, Switch, Route }from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
+import LoginPage from './pages/onboarding/LoginPage'
+import HomePage from './pages/home/HomePage';
+import ResourcesPage from './pages/resources/ResourcesPage';
+import BottomNavBar from './components/BottomNavBar';
+import TopNavBar from './components/TopNavBar';
+
+import styled from 'styled-components'
+
+import {userData, otherData} from './mockData';
+
+// const hasOnboarded = data.hasOnboarded;
+// const hasLoggedIn = data.hasLoggedIn;
+
+
 function App() {
-  return (
+
+  const [hasLoggedIn, setHasLoggedIn] = useState(userData!=null);
+  const [hasOnboarded, setHasOnboarded] = useState(userData!=null && userData.hasOnboarded);
+
+
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  })
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({ //can use screen size also
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+      console.log('size of window.innerWidth: ' + window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => { window.removeEventListener('resize', handleResize) }
+  }, [])
+
+
+  return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* Has not logged in - show login screen*/}
+      {!hasLoggedIn&&
+        <LoginPage/>
+      }
+
+
+      {/* Has not Onboarded - show onboarding*/}
+      {hasLoggedIn&&!hasOnboarded&&
+      (<p>this shld show onboarding screen</p>)
+      }
+
+
+      {/* Logged in & Onboarded - show main app */}
+      {hasLoggedIn&&hasOnboarded&&
+        (
+          dimensions.width>600? //width of phones:300-500
+            (
+            <DesktopLayout>
+              <MainPageContent/>
+            </DesktopLayout>
+            )
+            :
+            (
+            <MobileLayout>
+              <MainPageContent/>
+            </MobileLayout>
+            )
+        )
+      }
+
     </div>
-  );
+  )
+}
+
+
+function MainPageContent(){
+  return (
+    <div className="MainPageContent" style={{ width:'100%', height:'100%'}}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={HomePage}/>
+          <Route path='/resources' component={ResourcesPage}/>
+        </Switch>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+
+function MobileLayout({children}){
+  return(
+    <>
+    <div style={{background:'grey'}}>MobileLayout</div>
+      {children}
+    {/* <div style={{background:'red', position:'fixed', bottom:'0', width:'100vw', height:'68px'}}>MobileLayout-BottomNavBar</div> */}
+    <BottomNavBar/>
+
+    </>
+  )
+}
+
+function DesktopLayout({children}){
+  return(
+    <>
+    <div style={{background:'grey'}}>DesktopLayout - TopNavBar</div>
+      {children}
+    </>
+  )
 }
 
 export default App;
+
