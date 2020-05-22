@@ -100,7 +100,7 @@ function MainPageContent(){
 function MobileLayout({children}){
   return(
     <>
-    <div style={{'margin-bottom':'56px'}}>
+    <div style={{'padding-bottom':'56px'}}>
       {/* <div style={{background:'grey'}}>MobileLayout</div> */}
       {children}
       {/* <div style={{background:'red', position:'fixed', bottom:'0', width:'100vw', height:'68px'}}>MobileLayout-BottomNavBar</div> */}
