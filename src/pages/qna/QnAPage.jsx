@@ -3,6 +3,7 @@ import DarkGreenOverlay from '../../components/DarkGreenOverlay';
 import BackButton from '../../components/BackButton';
 import PageTitle from '../../components/PageTitle'
 import TextBox from '../../components/TextBox'
+import Pill from '../../components/Pill'
 
 
 function QnAPage(){
@@ -12,6 +13,7 @@ function QnAPage(){
         <PageTitle>Q&A Page</PageTitle>
         <DarkGreenOverlay>
             <TextBox>
+                <Pill>Wandering</Pill>
                 sadasds sdasd as das dasd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd as dasd as dasd as ds dasdsdsds dsdsdsdsd sdsdsd asd asd asd sd sd s dasd asd asd asd asd 
             </TextBox>
             <TextBox>

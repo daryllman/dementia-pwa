@@ -15,9 +15,16 @@ const Container = styled.div`
   margin-right:30px;
 `
 
+const TextHolder = styled.div`
+  text-align: left;
+`
+
+
 function TextBox({children}){
     return(
-    <Container>{children}</Container>
+    <Container>
+        <TextHolder>{children}</TextHolder>
+    </Container>
     )
 }
 
