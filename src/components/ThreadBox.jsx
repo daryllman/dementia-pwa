@@ -15,6 +15,10 @@ const TopContainer = styled.div`
   margin-bottom: 12px;
 `
 
+const QuestionContainer = styled.div`
+  margin-bottom: 10px;
+`
+
 
 //Inputs needed: Trait name, Number of hours ago (hardcoded for now), Main content text, Number of comments, Number of likes
 //i.e.: trait, hoursAgo, question, commentsNum, likesNum
@@ -26,7 +30,7 @@ function ThreadBox({trait, hoursAgo, question, commentsNum, likesNum}){
             <TopContainer>
             <Pill>{trait}</Pill> <LapsedText>{hoursAgo}</LapsedText>
             </TopContainer>
-                {question}
+                <QuestionContainer>{question}</QuestionContainer>
             <CommentNLikeWrapper commentsNum={commentsNum} likesNum={likesNum} />
         </TextBox>
         </>
