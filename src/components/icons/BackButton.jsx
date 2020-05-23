@@ -12,9 +12,9 @@ const ButtonWrapper = styled.div`
 `;
 
 
-function BackButton(){
+function BackButton({onClick}){
     return(
-        <ButtonWrapper>
+        <ButtonWrapper onClick={onClick}>
             <BackButtonIcon style={{color:'var(--primary-white-text-color)'}}/>
         </ButtonWrapper>
     )
