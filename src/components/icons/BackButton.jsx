@@ -10,6 +10,7 @@ const ButtonWrapper = styled.div`
   top: 15px;
   left: 15px;
   cursor: pointer;
+  transition: 0.4s;
   color: var(--primary-white-text-color);
   ${BackButtonIcon}:hover{
       color: var(--secondary-green-color);
