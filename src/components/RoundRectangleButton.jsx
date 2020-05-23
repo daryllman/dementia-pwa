@@ -13,6 +13,13 @@ const ButtonContainer = styled.div`
   font-weight: bold;
   border-radius: 100px;
   text-align: center;
+  transition: 0.4s;
+  cursor: pointer;
+  &:hover{
+      color: white;
+      border: none;
+      background: var(--secondary-green-color);
+  }
 `
 
 const TextSpan = styled.span`

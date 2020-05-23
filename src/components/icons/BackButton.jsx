@@ -9,13 +9,18 @@ const ButtonWrapper = styled.div`
   border-width: 0;
   top: 15px;
   left: 15px;
+  cursor: pointer;
+  color: var(--primary-white-text-color);
+  ${BackButtonIcon}:hover{
+      color: var(--secondary-green-color);
+  }
 `;
 
 
 function BackButton({onClick}){
     return(
         <ButtonWrapper onClick={onClick}>
-            <BackButtonIcon style={{color:'var(--primary-white-text-color)'}}/>
+            <BackButtonIcon/>
         </ButtonWrapper>
     )
 }
