@@ -55,7 +55,7 @@ function QnAPage(){
     //const latestQuestions = qnaData.latestQuestions;
     return(
         <>
-        <AskAQuestionButton>Ask a question</AskAQuestionButton>
+        <AskAQuestionButton onClick={()=>{console.log('Ask a Question Button clicked')}}>Ask a question</AskAQuestionButton>
         <DropdownSelection/>
         <DarkGreenOverlay>
 
