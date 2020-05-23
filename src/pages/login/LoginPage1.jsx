@@ -50,7 +50,7 @@ const MainLogo = () => {
     )
 }
 
-function LoginPage(){
+function LoginPage1(){
     const handleOnClick = () =>{
         console.log('button clicked - this should trigger handle functions');
     }
@@ -68,7 +68,7 @@ function LoginPage(){
     )
 }
 
-export default LoginPage;
+export default LoginPage1;
 
 /*
 

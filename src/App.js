@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route }from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-import LoginPage from './pages/onboarding/LoginPage'
+import LoginPage1 from './pages/login/LoginPage1'
 import HomePage from './pages/home/HomePage';
 import ResourcesPage from './pages/resources/ResourcesPage';
 import QnAPage from './pages/qna/QnAPage';
@@ -50,7 +50,7 @@ function App() {
 
       {/* Has not logged in - show login screen*/}
       {!hasLoggedIn&&
-        <LoginPage/>
+        <LoginPage1/>
       }
 
 
