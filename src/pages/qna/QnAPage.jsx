@@ -17,6 +17,7 @@ import {qnaData} from '../../mockData';
 
 
 const AskAQuestionButton = styled.button`
+  background: var(--primary-white-text-color);
   font-size: 24px;
   padding: 0.25em 1em;
   border-radius: 20px;
