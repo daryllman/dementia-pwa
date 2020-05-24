@@ -22,5 +22,5 @@
     "display": "standalone",
     "theme_color": "#3C8484",
     "scope": "/",
-    "background_color": "linear-gradient(155.21deg, #214B4B 0%, rgba(60, 132, 132, 0.87) 0.01%, #214B4B 100%)"
+    "background_color": "#3C8484"
 }
