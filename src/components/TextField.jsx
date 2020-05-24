@@ -101,13 +101,8 @@ const BootstrapInput = withStyles(theme => ({
   }))(InputBase);
 //________________________________________________________________________________
 
-function MainInputTextField({label}){
+function MainInputTextField({label, onChange}){
     const classes = useStyles();
-    const handleChange=(e)=>{
-        //console.log(e.target.name);
-        console.log(e.target.value);
-        
-    }
     return (
         <TextFieldWrapper>
             <CssTextField
@@ -118,20 +113,15 @@ function MainInputTextField({label}){
                 id="custom-css-outlined-input"
                 InputProps={{className: classes.input}}
                 InputLabelProps={{className: classes.inputLabel}}
-                onChange={handleChange}
+                onChange={onChange}
             />
         </TextFieldWrapper>
     )
 }
 
-function InputTextField({defaultValue}){
-    const handleChange=(e)=>{
-        //console.log(e.target.name);
-        console.log(e.target.value);
-        
-    }
+function InputTextField({defaultValue, onChange}){
     return(
-        <BootstrapInput defaultValue={defaultValue} id="bootstrap-input" onChange={handleChange}/>
+        <BootstrapInput defaultValue={defaultValue} id="bootstrap-input" onChange={onChange}/>
     )
 }
 

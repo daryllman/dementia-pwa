@@ -36,6 +36,7 @@ const BottomUnderlineText = styled.div`
     margin: auto;
     text-align: center;
     text-decoration-line: underline;
+    cursor: pointer;
 `
 
 
@@ -50,20 +51,23 @@ const MainLogo = () => {
     )
 }
 
-function LoginPage1(){
+function LoginPage1({handleToSignIn, handleToSignUp}){
     const handleOnClick = () =>{
         console.log('button clicked - this should trigger handle functions');
+    }
+    const handleForgotPassword = () =>{
+        console.log('Forgot password clicked');
     }
 
     return(
         <>
         <MainLogo/>
         <DescriptionText>Platform for Caregivers of people with dementia</DescriptionText>
-        <RoundRectangleButton variant="secondary" onClick={handleOnClick}>Sign up</RoundRectangleButton>
-        <div style={{height:'2.5vw'}}></div>
-        <RoundRectangleButton variant="primary" onClick={handleOnClick}>Sign in</RoundRectangleButton>
-        <div style={{height:'2.5vw'}}></div>
-        <BottomUnderlineText>Forgot password</BottomUnderlineText>
+        <RoundRectangleButton variant="secondary" onClick={handleToSignUp}>Sign up</RoundRectangleButton>
+        <div style={{height:'2vh'}}></div>
+        <RoundRectangleButton variant="primary" onClick={handleToSignIn}>Sign in</RoundRectangleButton>
+        <div style={{height:'2vh'}}></div>
+        <BottomUnderlineText onClick={handleForgotPassword}>Forgot password</BottomUnderlineText>
         </>
     )
 }

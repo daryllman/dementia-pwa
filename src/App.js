@@ -50,7 +50,7 @@ function App() {
 
       {/* Has not logged in - show login screen*/}
       {!hasLoggedIn&&
-        <LoginController/>
+        <LoginController setHasLoggedIn={setHasLoggedIn}/>
       }
 
 
