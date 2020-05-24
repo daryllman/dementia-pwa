@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route }from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-import LoginPage from './pages/onboarding/LoginPage'
+import LoginController from './pages/login/LoginController'
 import HomePage from './pages/home/HomePage';
 import ResourcesPage from './pages/resources/ResourcesPage';
 import QnAPage from './pages/qna/QnAPage';
@@ -14,7 +14,7 @@ import TopNavBar from './components/TopNavBar';
 
 import styled from 'styled-components'
 
-import {userData, otherData} from './mockData';
+import {userData, userDataSample, otherData, appMode} from './mockData';
 
 // const hasOnboarded = data.hasOnboarded;
 // const hasLoggedIn = data.hasLoggedIn;
@@ -23,8 +23,8 @@ import {userData, otherData} from './mockData';
 function App() {
   //const [currPage, setCurrPage] = useState('/'); ---to be done --to set state to sync desktop n mobile view
 
-  const [hasLoggedIn, setHasLoggedIn] = useState(userData!=null);
-  const [hasOnboarded, setHasOnboarded] = useState(userData!=null && userData.hasOnboarded);
+  const [hasLoggedIn, setHasLoggedIn] = useState(userData!=null || appMode==2 || appMode==3);
+  const [hasOnboarded, setHasOnboarded] = useState(userData!=null && userData.hasOnboarded || appMode==3);
 
 
   const [dimensions, setDimensions] = useState({
@@ -50,7 +50,7 @@ function App() {
 
       {/* Has not logged in - show login screen*/}
       {!hasLoggedIn&&
-        <LoginPage/>
+        <LoginController setHasLoggedIn={setHasLoggedIn}/>
       }
 
 
