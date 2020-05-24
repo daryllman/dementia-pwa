@@ -15,6 +15,7 @@ const ButtonContainer = styled.div`
   text-align: center;
   transition: 0.4s;
   cursor: pointer;
+  box-shadow: ${props=> props.variant&&props.variant==='secondary'? "none":"0px 4px 4px rgba(0, 0, 0, 0.25)"};
   &:hover{
       color: white;
       border: none;
