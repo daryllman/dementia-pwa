@@ -1,11 +1,31 @@
 import React from 'react'
 
+// Toggle between app modes in development!
+// 1: Dev - Start at Login Screen - use sample data (does not save anything)
+// 2: Dev - Start at OnBoarding Screen
+// 3: Dev - Start at main app view - use sample data
+// 4: Dev - Start at Login Screen - save data 
+// 5: Prod - Follow localStorage settings
+export const appMode = 1;
+
+
+
 // If user is not logged in
-// export const userData = null
+export const userData = null
 
 
-export const userData = {
-    hasOnboarded: true,
+// export const userData = {
+//     hasOnboarded: false,
+//     userName: 'Jack',
+//     patientName: 'Mr Lim Boon Kok',
+//     patientTraits: ['Wandering', 'Resistive', 'Physical Aggression']
+// };
+
+// rawuserData used for saving info
+export const rawUserData = null
+
+export const userDataSample = {
+    hasOnboarded: false,
     userName: 'Jack',
     patientName: 'Mr Lim Boon Kok',
     patientTraits: ['Wandering', 'Resistive', 'Physical Aggression']
