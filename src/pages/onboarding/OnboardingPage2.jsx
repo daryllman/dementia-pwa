@@ -28,7 +28,7 @@ const DescriptionText = styled.div`
     font-size: 18px;
     font-weight: 300;
     margin: auto;
-    width: 50vw;
+    width: 80vw;
     text-align: center;
     margin-bottom: 1vh;
 `
@@ -42,7 +42,7 @@ const OverlayInnerContainer = styled.div`
 const QuestionText = styled.div`
     color: var(--primary-white-text-color);
     font-size: 18px;
-    margin-bottom: 1vh;
+    margin-bottom: 0.5vh;
 `
 
 const QuestionSegmentContainer = styled.div`
@@ -56,7 +56,7 @@ function OnboardingPage2({nextOnboardingPage, prevOnboardingPage}){
     return (
         <>
         <BackButton onClick={prevOnboardingPage}/>
-        <HeaderTitle>Tell me more about the dementia senior you are taking care of</HeaderTitle>
+        <HeaderTitle>Tell me more about yourself as a Caregiver</HeaderTitle>
         <DarkGreenOverlay>
             <OverlayInnerContainer>
                 {/*__________________________________________________________________ */}
