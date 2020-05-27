@@ -46,22 +46,26 @@ const DividerLine = styled.div`
 
 
 
-function ResistivePage({goBack, handleSave}){
+function InappropriatePage({goBack, handleSave}){
     return (
         <>
         <BackButton onClick={goBack}/>
-        <HeaderTitle>Resistive</HeaderTitle>
+        <HeaderTitle>Inappropriate</HeaderTitle>
         <DarkGreenContainer>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to eat</QuestionTitle>
+            <QuestionTitle>Inappropriate noices at times</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to wash or dress</QuestionTitle>
+            <QuestionTitle>Puts random non-food item in mouth</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to take medication</QuestionTitle>
+            <QuestionTitle>Rummages/ take belongings</QuestionTitle>
+            <GradingForm type="single" options={gradingOptions}/>
+            <DividerLine/>
+            {/*_______________________________________________________ */}
+            <QuestionTitle>Sexually Inappropriate with self or others</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
@@ -75,4 +79,4 @@ function ResistivePage({goBack, handleSave}){
     )
 }
 
-export default ResistivePage;
+export default InappropriatePage;

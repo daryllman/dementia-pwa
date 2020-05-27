@@ -46,22 +46,22 @@ const DividerLine = styled.div`
 
 
 
-function ResistivePage({goBack, handleSave}){
+function QuietPage({goBack, handleSave}){
     return (
         <>
         <BackButton onClick={goBack}/>
-        <HeaderTitle>Resistive</HeaderTitle>
+        <HeaderTitle>Forgetful</HeaderTitle>
         <DarkGreenContainer>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to eat</QuestionTitle>
+            <QuestionTitle>Decreased social communication with others</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to wash or dress</QuestionTitle>
+            <QuestionTitle>Refuses to answer questions</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to take medication</QuestionTitle>
+            <QuestionTitle>Uses simple gestures to replace speech</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
@@ -75,4 +75,4 @@ function ResistivePage({goBack, handleSave}){
     )
 }
 
-export default ResistivePage;
+export default QuietPage;
