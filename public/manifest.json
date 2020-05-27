@@ -1,6 +1,7 @@
 {
     "short_name": "Dementia Pals",
-    "name": "Dementia Pals App",
+    "name": "Dementia Pals",
+    "description": "Platform for Caregivers of people with dementia",
     "icons": [{
             "src": "favicon.ico",
             "sizes": "64x64 32x32 24x24 16x16",
@@ -17,8 +18,9 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": ".",
+    "start_url": "/?source=pwa",
     "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "theme_color": "#3C8484",
+    "scope": "/",
+    "background_color": "#3C8484"
 }

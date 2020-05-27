@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import LoginController from './pages/login/LoginController'
+import OnboardingController from './pages/onboarding/OnboardingController';
 import HomePage from './pages/home/HomePage';
 import ResourcesPage from './pages/resources/ResourcesPage';
 import QnAPage from './pages/qna/QnAPage';
@@ -32,6 +33,11 @@ function App() {
     height: window.innerHeight,
   })
 
+  const sendOnboardDetails = ({OnboardData}) =>{
+    console.log('sent onboard details to server');
+    setHasOnboarded(true);
+  }
+
   useEffect(() => {
     const handleResize = () => {
       setDimensions({ //can use screen size also
@@ -56,7 +62,7 @@ function App() {
 
       {/* Has not Onboarded - show onboarding*/}
       {hasLoggedIn&&!hasOnboarded&&
-      (<p>this shld show onboarding screen</p>)
+      <OnboardingController handleOnboard={sendOnboardDetails}/>
       }
 
 
