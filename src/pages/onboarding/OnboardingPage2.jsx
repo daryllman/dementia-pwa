@@ -4,7 +4,13 @@ import BackButton from '../../components/icons/BackButton';
 import RoundRectangleButton from '../../components/RoundRectangleButton';
 import DarkGreenOverlay from '../../components/DarkGreenOverlay';
 import {InputTextField} from '../../components/TextField';
-import {RoundRectangleOptionsButton2} from '../../components/ToggleOptionsForm';
+import {ButtonOptionsForm} from '../../components/ButtonOptionsForm';
+
+const data_a = ['Once a week', '2-3 times a week', 'More than 3 times a week'];
+const data_b = ['Yes', 'No'];
+const data_c = ['Less than 6 months', '6 months to a year', 'More than a year'];
+const data_d = ['Understand dementia better', 'All in one guide platform',  'Get to know other people', 'Desperate to get help', 'Learn the suggested exercises or activities for dementia',  'External Support in providing care', 'Understanding my rights', 'Know the support services available'];
+
 
 const HeaderTitle = styled.div`
   color: var(--primary-white-text-color);
@@ -53,17 +59,40 @@ function OnboardingPage2({nextOnboardingPage, prevOnboardingPage}){
         <HeaderTitle>Tell me more about the dementia senior you are taking care of</HeaderTitle>
         <DarkGreenOverlay>
             <OverlayInnerContainer>
-                <QuestionSegmentContainer>
+                {/*__________________________________________________________________ */}
+                {/* <QuestionSegmentContainer>
                     <QuestionText>His/her name*</QuestionText>
                     <InputTextField onChange={(e)=>console.log(e.target.value)}/> 
+                </QuestionSegmentContainer> */}
+
+                {/*__________________________________________________________________ */}
+                <QuestionSegmentContainer>
+                    <QuestionText>On average, how often do you take care of your dementia patient?</QuestionText>
+                    <ButtonOptionsForm type="single" options={data_a}/>
                 </QuestionSegmentContainer>
 
+                {/*__________________________________________________________________ */}
                 <QuestionSegmentContainer>
-                    <QuestionText>His/her name*</QuestionText>
-                    <InputTextField /> 
+                    <QuestionText>Are you taking care of him/ her for the whole day? I.e. you are able to attend to him/her at quickly</QuestionText>
+                    <ButtonOptionsForm type="single" options={data_b}/>
                 </QuestionSegmentContainer>
-                <RoundRectangleOptionsButton2 selected={false}>Yes</RoundRectangleOptionsButton2>
-                    <RoundRectangleOptionsButton2 selected={true}>Less than 6 months sd sd</RoundRectangleOptionsButton2 >
+
+               {/*__________________________________________________________________ */}
+                <QuestionSegmentContainer>
+                    <QuestionText>How many years have you been taking care of him/her?</QuestionText>
+                    <ButtonOptionsForm type="single" options={data_c}/>
+                </QuestionSegmentContainer>
+
+                {/*__________________________________________________________________ */}
+                <QuestionSegmentContainer>
+                    <QuestionText>What is your main aim of installing Dementia Besties? You can select more than one</QuestionText>
+                    <ButtonOptionsForm type="multiple" options={data_d}/>
+                </QuestionSegmentContainer>
+
+                {/*__________________________________________________________________ */}
+
+                <div style={{height: '85px'}}></div>
+                <DescriptionText>Tell me more about the dementia senior you are taking care of</DescriptionText>
 
                 <RoundRectangleButton onClick={nextOnboardingPage}>Next</RoundRectangleButton>
             </OverlayInnerContainer>

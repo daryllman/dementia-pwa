@@ -10,7 +10,7 @@ const ButtonContainer = styled.div`
   height: 50px;
   min-width: 115px;
   max-width: 50vw;
-  margin: 20px;
+  margin: 10px;
   color:  ${props=> props.selected? "white":"var(--primary-text-color)"};
   font-size: 14px;
   font-weight: 300;
@@ -27,8 +27,7 @@ const ButtonContainer = styled.div`
 const TextSpan = styled.span`
     display: table-cell;
     vertical-align: middle;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
 `
 
 const OptionsFormContainer = styled.div`
