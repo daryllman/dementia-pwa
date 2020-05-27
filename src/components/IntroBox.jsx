@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import TextBox from './TextBox';
 import Pill from './Pill';
 import {CommentNLikeWrapper} from './icons/Comment-N-Like-Button';
+import { Button } from '@material-ui/core';
 
 const LapsedText = styled.div`
   color: var(--primary-green-color);
@@ -11,7 +12,9 @@ const LapsedText = styled.div`
 
 const TopContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex: 1;
+  row: space-around;
+  justify-content: space-around;
   margin-bottom: 12px;
 `
 
@@ -36,23 +39,36 @@ const Container = styled.div`
   margin-right:30px;
 `
 
+
+
 const WelcomeText = styled.div`
   color: var(--primary-text-color);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 `
 const CareTakerIntro = styled.div`
-  color: var(--primary-text-color);
+margin-top: 15px;
+  color: var(--primary-white-text-color);
   font-size: 20px;
   font-weight: bold;
 `
-// const TopTraitsText = styled.div`
-//   color: var(--primary-text-color);
-//   font-size: 
-// `
-// const TextHolder = styled.div`
-//   text-align: left;
-// `
+const TopTraitsText = styled.div`
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--primary-text-color);
+  font-size: 16px;
+`
+const UpdateButton = styled.div`
+shadowColor: '#000',
+   shadowOffset: { width: 0, height: 2 },
+   shadowOpacity: 0.5,
+   shadowRadius: 2,
+  
+  elevation: 20,
+  color: var(--primary-text-color);
+  font-size: 13px;
+  
+`
 
 
 // function TextBox({children}){
@@ -74,15 +90,20 @@ const CareTakerIntro = styled.div`
 function IntroBox({traits, nameOfSenior, nameOfCareTaker}){
     return(
         <>
-
+        <CareTakerIntro>Welcome back {nameOfCareTaker}!</CareTakerIntro>
         <Container>
             <WelcomeText>You are taking care of {nameOfSenior}</WelcomeText>
-            <p>Top traits</p>
+            <TopTraitsText>Top traits</TopTraitsText>
             <TopContainer>
-                {traits.map((item)=>(
+                {/* {traits.map((item)=>(
                     <Pill>{item.trait}</Pill>
-                ) )}
+                ) )} */}
+
+                {traits.map((value, index)=> <Pill key={index}>{value}</Pill>)}
+
+                
                 </TopContainer>
+                <Button style={{color:'var(--primary-text-color)', font:'Roboto',}} onClick={()=>{console.log('Update Button clicked')}}>Update Profile</Button>
            
          
         </Container>

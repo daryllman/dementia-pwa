@@ -6,14 +6,15 @@ import BackButton from '../../components/icons/BackButton';
 import PageTitle from '../../components/PageTitle'
 import TextBox from '../../components/TextBox'
 import Pill from '../../components/Pill'
-import {CommentButton, CommentWrapper, LikeButton, LikeWrapper,CommentNLikeWrapper} from '../../components/icons/Comment-N-Like-Button'
+import { CommentButton, CommentWrapper, LikeButton, LikeWrapper, CommentNLikeWrapper } from '../../components/icons/Comment-N-Like-Button'
 import ThreadBox from '../../components/ThreadBox';
 import IntroBox from '../../components/IntroBox';
+import TipBox from '../../components/TipBox';
 //import Dropdown from 'react-dropdown';
 //import 'react-dropdown/style.css';
 //import dropdownstyles from './Dropdown.module.css';
 
-import {qnaData, onboardingData} from '../../mockData';
+import { qnaData, onboardingData, userDataSample , tipsForApp} from '../../mockData';
 
 
 
@@ -32,12 +33,29 @@ const AskAQuestionButton = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
+const TextOnTipsPage = styled.div`
+  color: var(--primary-white-text-color);
+  font-size: 15px;
+`
 
-function HomePage(){
+
+function HomePage() {
 
     return (
         <>
-            <IntroBox traits={onboardingData.topTraits} name={onboardingData.name} />
+            <IntroBox traits={userDataSample.patientTraits} nameOfSenior={userDataSample.patientName} nameOfCareTaker={userDataSample.userName} />
+            <DarkGreenOverlay>
+                <TextOnTipsPage>Tips of the day</TextOnTipsPage>
+
+                <TipBox tips={tipsForApp.topTipsOfDay}/> 
+                <TextOnTipsPage>Latest questions from the community</TextOnTipsPage>
+                {qnaData.latestQuestions.map((item) => ( // attributes: trait, hoursAgo, question, commentsNum, likesNum
+                    <ThreadBox trait={item.trait} hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} />
+                )
+                )}
+
+            </DarkGreenOverlay>
+
         </>
     )
 }
@@ -122,7 +140,7 @@ export default HomePage;
 
 
 //Just archive on how to use BackButton and PageTitle
-/* 
+/*
 
 function QnAPage(){
     //const latestQuestions = qnaData.latestQuestions;
@@ -136,7 +154,7 @@ function QnAPage(){
                 <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} />
             )
             )}
-            
+
         </DarkGreenOverlay>
         </>
     )
