@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackButton from '../../components/icons/BackButton';
+//import BackButton from '../../components/icons/BackButton';
 import RoundRectangleButton from '../../components/RoundRectangleButton';
 
 const HeaderLabel = styled.div`
