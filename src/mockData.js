@@ -6,7 +6,7 @@ import React from 'react'
 // 3: Dev - Start at main app view - use sample data
 // 4: Dev - Start at Login Screen - save data 
 // 5: Prod - Follow localStorage settings
-export const appMode = 3;
+export const appMode = 1;
 
 
 
