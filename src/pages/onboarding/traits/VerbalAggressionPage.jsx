@@ -46,22 +46,22 @@ const DividerLine = styled.div`
 
 
 
-function ResistivePage({goBack, handleSave}){
+function VerbalAggressionPage({goBack, handleSave}){
     return (
         <>
         <BackButton onClick={goBack}/>
-        <HeaderTitle>Resistive</HeaderTitle>
+        <HeaderTitle>Verbal Aggression</HeaderTitle>
         <DarkGreenContainer>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to eat</QuestionTitle>
+            <QuestionTitle>Increasing Coarse language</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to wash or dress</QuestionTitle>
+            <QuestionTitle>Spitting</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to take medication</QuestionTitle>
+            <QuestionTitle>Likes to scream/ raise voice</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
@@ -75,4 +75,4 @@ function ResistivePage({goBack, handleSave}){
     )
 }
 
-export default ResistivePage;
+export default VerbalAggressionPage;

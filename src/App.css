@@ -16,6 +16,7 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-green-color);
     font-size: 16px;
+    overscroll-behavior-y: contain;
 }
 
 .App {

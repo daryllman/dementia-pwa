@@ -46,22 +46,22 @@ const DividerLine = styled.div`
 
 
 
-function ResistivePage({goBack, handleSave}){
+function SelfHarmingPage({goBack, handleSave}){
     return (
         <>
         <BackButton onClick={goBack}/>
-        <HeaderTitle>Resistive</HeaderTitle>
+        <HeaderTitle>Self-Harming</HeaderTitle>
         <DarkGreenContainer>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to eat</QuestionTitle>
+            <QuestionTitle>Biting, cutting, scratching or picking themselves</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to wash or dress</QuestionTitle>
+            <QuestionTitle>Head slapping or banging</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
-            <QuestionTitle>Does not want to take medication</QuestionTitle>
+            <QuestionTitle>Suicidal thoughts</QuestionTitle>
             <GradingForm type="single" options={gradingOptions}/>
             <DividerLine/>
             {/*_______________________________________________________ */}
@@ -75,4 +75,4 @@ function ResistivePage({goBack, handleSave}){
     )
 }
 
-export default ResistivePage;
+export default SelfHarmingPage;

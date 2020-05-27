@@ -127,3 +127,9 @@ function InputTextField({defaultValue, onChange}){
 
 export {MainInputTextField, InputTextField};
 
+
+
+// Usage for InputTextField
+/*
+<InputTextField onChange={(e)=>console.log(e.target.value)}/> 
+*/
