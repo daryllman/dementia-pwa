@@ -1,0 +1,12 @@
+.container {
+    flex: 1 0 0;
+  }
+  
+  .divider {
+    display: block;
+    width: 2px;
+    background-color: white;
+    margin: 0 10px;
+    height: 1em;
+  }
+  

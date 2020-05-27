@@ -8,6 +8,7 @@ import LoginController from './pages/login/LoginController'
 import OnboardingController from './pages/onboarding/OnboardingController';
 import HomePage from './pages/home/HomePage';
 import ResourcesPage from './pages/resources/ResourcesPage';
+import ResourcesController from './pages/resources/ResourcePageController'
 import QnAPage from './pages/qna/QnAPage';
 import ProfilePage from './pages/profile/ProfilePage';
 import BottomNavBar from './components/BottomNavBar';
@@ -94,7 +95,7 @@ function MainPageContent(){
     <div className="MainPageContent" style={{ width:'100%', height:'100%'}}>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/resources' component={ResourcesPage}/>
+          <Route path='/resources' component={ResourcesController}/>
           <Route path='/qna' component={QnAPage}/>
           <Route path='/profile' component={ProfilePage}/>
         </Switch>

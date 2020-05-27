@@ -101,40 +101,41 @@ const TopContainer = styled.div`
 
 
 
-function ResourcesPage({handleToTipsPage,handleToArticlesPage}){
-  const handleForgotPassword = () =>{
-    console.log('Forgot password clicked');
-}
-
-
+function ArticlesPage({handleBackToResource}){
+    const handleForgotPassword = () =>{
+        console.log('Forgot password clicked');
+    }
 
     return (
-        <>
-  <ResourcesText >Resources</ResourcesText>
-    <Container>
-    <div onClick={handleToTipsPage}><TipButton/></div>
-    <div onClick={handleToArticlesPage}><ArticleButton></ArticleButton></div>
-    </Container>
+//         <>
+//         <ResourcesText>Resources</ResourcesText>
+//     <Container>
+//     <TipButton></TipButton>
+//     <ArticleButton></ArticleButton>
+//     </Container>
 
-<Container>
-<ActivityButton></ActivityButton>
-<SupportButton></SupportButton>
-</Container>
+// <Container>
+// <ActivityButton></ActivityButton>
+// <SupportButton></SupportButton>
+// </Container>
 
-<Container>
-    <FinancialButton></FinancialButton>
-    <LegalButton></LegalButton>
-</Container>
+// <Container>
+//     <FinancialButton></FinancialButton>
+//     <LegalButton></LegalButton>
+// </Container>
 
-<Container>
-    <ReportButton></ReportButton>
-    <OnlineButton></OnlineButton>
-</Container>
+// <Container>
+//     <ReportButton></ReportButton>
+//     <OnlineButton></OnlineButton>
+// </Container>
 
- </>
 
-/* <>
-<BackButton></BackButton>
+
+
+// </>
+
+<>
+<BackButton onClick={handleBackToResource}></BackButton>
 <DementiaText>Dementia Articles</DementiaText>
 <DarkGreenOverlay>
         <Container>
@@ -164,10 +165,11 @@ function ResourcesPage({handleToTipsPage,handleToArticlesPage}){
         
 
 </DarkGreenOverlay>
-</> */
+</> 
+
 
 /*<>
-<BackButton></BackButton>
+<BackButton onClick={handleBackToResource} ></BackButton>
 <DementiaText>Tips</DementiaText>
 <DarkGreenOverlay>
 
@@ -188,4 +190,4 @@ function ResourcesPage({handleToTipsPage,handleToArticlesPage}){
 }
 
 
-export default ResourcesPage;
+export default ArticlesPage;
