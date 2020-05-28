@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import DarkGreenOverlay from '../../components/DarkGreenOverlay';
 import BackButton from '../../components/icons/BackButton';
@@ -7,6 +7,7 @@ import TextBox from '../../components/TextBox'
 import Pill from '../../components/Pill'
 import {CommentButton, CommentWrapper, LikeButton, LikeWrapper,CommentNLikeWrapper} from '../../components/icons/Comment-N-Like-Button'
 import ThreadBox from '../../components/ThreadBox';
+import QuestionThreadPage from './QuestionThreadPage';
 
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -52,8 +53,11 @@ function DropdownSelection(){
     )
 }  
 
-function QnAPage(){
-    //const latestQuestions = qnaData.latestQuestions;
+function MainView({setMode}){
+    const handleThreadBox = () => {
+        console.log('Threadbox clicked');
+        setMode('thread');
+    }
     return(
         <>
         <AskAQuestionButton onClick={()=>{console.log('Ask a Question Button clicked')}}>Ask a question</AskAQuestionButton>
@@ -61,11 +65,29 @@ function QnAPage(){
         <DarkGreenOverlay>
 
             {qnaData.latestQuestions.map(( item )=>( // attributes: trait, hoursAgo, question, commentsNum, likesNum
-                <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} />
+                // <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum}  setCurrThread={}/>
+                <ThreadBox trait={item.trait}hoursAgo={item.hoursAgo} question={item.question} commentsNum={item.commentsNum} likesNum={item.likesNum} onClick={handleThreadBox}/>
             )
             )}
 
         </DarkGreenOverlay>
+        </>
+    )
+}
+
+function QnAPage(){
+    const [mode, setMode]=useState('main'); //either 'main' or 'thread'
+    const [currThread, setCurrThread] = useState('');
+    return(
+        <>
+        {mode=='main'&& 
+        <MainView setCurrThread={setCurrThread} setMode={setMode}/>
+        }
+        {mode=='thread'&& 
+        // <QuestionThreadPage questionThread={/* to add next time */} goBack={setMode}/>
+        <QuestionThreadPage goBack={setMode}/>
+        }
+
         </>
     )
 }

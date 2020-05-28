@@ -23,14 +23,14 @@ const QuestionContainer = styled.div`
 //Inputs needed: Trait name, Number of hours ago (hardcoded for now), Main content text, Number of comments, Number of likes
 //i.e.: trait, hoursAgo, question, commentsNum, likesNum
 
-function ThreadBox({trait, hoursAgo, question, commentsNum, likesNum}){
+function ThreadBox({trait, hoursAgo, question, commentsNum, likesNum, onClick}){
     return(
         <>
-        <TextBox>
-            <TopContainer>
-            <Pill>{trait}</Pill> <LapsedText>{hoursAgo}</LapsedText>
+        <TextBox onClick={onClick}>
+            <TopContainer onClick={onClick}>
+            <Pill onClick={()=>console.log('clickss')}>{trait}</Pill> <LapsedText>{hoursAgo}</LapsedText>
             </TopContainer>
-                <QuestionContainer>{question}</QuestionContainer>
+                <QuestionContainer onClick={onClick}>{question}</QuestionContainer>
             <CommentNLikeWrapper commentsNum={commentsNum} likesNum={likesNum} />
         </TextBox>
         </>

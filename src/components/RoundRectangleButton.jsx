@@ -21,6 +21,12 @@ const ButtonContainer = styled.div`
       border: none;
       background: var(--secondary-green-color);
   }
+  &:focus{
+    outline: none;
+}
+&:active{
+    outline: none;
+}
 `
 
 const TextSpan = styled.span`
