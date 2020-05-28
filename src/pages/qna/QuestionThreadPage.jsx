@@ -80,7 +80,7 @@ function QuestionThreadPage({goBack}){
         <BackButton onClick={()=>goBack('main')}/>
         <TextBox>The person I am taking care of gets easily agitated and aggresive, what do I do?</TextBox>
         <DarkGreenOverlay>
-            
+
             {/* {thread1Data.threads.map((name, comment, hoursAgo, question, likesNum, commentsNum, dp, badges)=>{
                 return (
                     <DiscussionResponse name={name} hoursAgo={hoursAgo} question={comment} commentsNum={commentsNum} likesNum={likesNum} pic={dp} badges={badges}/>
@@ -92,7 +92,7 @@ function QuestionThreadPage({goBack}){
 
             <DiscussionResponse name="Daryll Wong " hoursAgo="1h" question="Is this a sudden phenomenon or gradually worsening? Try to understand the cause." commentsNum="8" likesNum="27" pic={DaryllDP} badges={[Star]}/>
             <DiscussionResponse name="Chew Tan " hoursAgo="20min" question="Sometimes it may be something medical related. Have you consulted a doctor before?" commentsNum="10" likesNum="16" pic={ChewDP} badges={[Hat]}/>
-            <DiscussionResponse name="Loewn " hoursAgo="20min" question="Try contacting the council for help" commentsNum="10" likesNum="14" pic={ChewDP} badges={[]}/>
+            <DiscussionResponse name="Loewn " hoursAgo="20min" question="Try contacting the council for help" commentsNum="10" likesNum="14" pic={LowenDP} badges={[]}/>
 
         </DarkGreenOverlay>
         <p>Question Thread Page</p>
